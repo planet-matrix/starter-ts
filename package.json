@@ -41,7 +41,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "pnpm build",
     "release": "bumpp && npm publish",
     "start": "tsx src/index.ts",
     "test": "vitest",
@@ -49,7 +49,6 @@
     "prepare": "simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/ni": "^0.21.12",
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@types/node": "^20.10.2",
     "@typescript-eslint/eslint-plugin": "^6.13.1",

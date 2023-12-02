@@ -8,9 +8,6 @@ importers:
 
   .:
     devDependencies:
-      '@antfu/ni':
-        specifier: ^0.21.12
-        version: 0.21.12
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.1.1
         version: 4.1.1(prettier@3.1.0)
@@ -73,11 +70,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
-    dev: true
-
-  /@antfu/ni@0.21.12:
-    resolution: {integrity: sha512-2aDL3WUv8hMJb2L3r/PIQWsTLyq7RQr3v9xD16fiz6O8ys1xEyLhhTOv8gxtZvJiTzjTF5pHoArvRdesGL1DMQ==}
-    hasBin: true
     dev: true
 
   /@babel/code-frame@7.22.13:
