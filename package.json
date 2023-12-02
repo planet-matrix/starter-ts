@@ -67,6 +67,6 @@
     "vitest": "^1.0.0-beta.6"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint && pnpm typecheck && pnpm test -- run && pnpm build"
+    "pre-commit": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test -- run && pnpm build"
   }
 }
