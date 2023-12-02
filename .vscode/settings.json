@@ -1,0 +1,7 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "eslint.experimental.useFlatConfig": true,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true
+}
