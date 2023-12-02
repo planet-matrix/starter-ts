@@ -1,7 +1,7 @@
 import process from "node:process"
 import ts from "@typescript-eslint/eslint-plugin"
 import tsParser from "@typescript-eslint/parser"
-import prettier from "eslint-config-prettier"
+import eslintConfigPrettier from "eslint-config-prettier"
 import unicorn from "eslint-plugin-unicorn"
 
 const files = ["src/**/*.ts", "test/**/*.ts"]
@@ -17,7 +17,6 @@ const linterOptions = {
 }
 const plugins = {
   "@typescript-eslint": ts,
-  prettier,
   unicorn,
 }
 
@@ -41,13 +40,5 @@ export default [
     },
   },
   // disable formatting rules, make sure to put this last
-  {
-    files,
-    languageOptions,
-    linterOptions,
-    plugins,
-    rules: {
-      ...prettier.rules,
-    },
-  },
+  eslintConfigPrettier,
 ]
