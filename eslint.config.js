@@ -27,6 +27,8 @@ export default [
     linterOptions,
     plugins,
     rules: {
+      "no-console": ["warn", { allow: ["warn", "error"] }],
+
       ...ts.configs["strict-type-checked"]?.rules,
       "@typescript-eslint/no-non-null-assertion": "off",
       "@typescript-eslint/no-unused-vars": "off",
@@ -34,9 +36,6 @@ export default [
 
       ...unicorn.configs.recommended.rules,
       "unicorn/prevent-abbreviations": "off",
-      "unicorn/prefer-top-level-await": "off",
-
-      "no-console": ["warn", { allow: ["warn", "error"] }],
     },
   },
   // disable formatting rules, make sure to put this last
