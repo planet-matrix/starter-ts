@@ -4,7 +4,7 @@ import tsParser from "@typescript-eslint/parser"
 import eslintConfigPrettier from "eslint-config-prettier"
 import unicorn from "eslint-plugin-unicorn"
 
-const files = ["src/**/*.ts", "test/**/*.ts"]
+const files = ["src/**/*.ts"]
 const languageOptions = {
   parser: tsParser,
   parserOptions: {
