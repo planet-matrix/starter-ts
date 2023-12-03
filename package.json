@@ -16,7 +16,6 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "module": "./dist/index.js",
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
