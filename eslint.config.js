@@ -22,6 +22,9 @@ const plugins = {
 
 export default [
   {
+    ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
+  },
+  {
     files,
     languageOptions,
     linterOptions,
