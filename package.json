@@ -43,10 +43,11 @@
     "dist"
   ],
   "simple-git-hooks": {
-    "pre-commit": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test -- run && pnpm knip && pnpm build && pnpm publint"
+    "pre-commit": "pnpm check"
   },
   "scripts": {
     "prepare": "simple-git-hooks",
+    "check": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test -- run && pnpm knip && pnpm build && pnpm publint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
@@ -55,7 +56,7 @@
     "build": "tsup",
     "publint": "publint",
     "knip": "knip",
-    "prepublishOnly": "pnpm build",
+    "prepublishOnly": "pnpm check",
     "changelog": "changelogen --output && prettier --write CHANGELOG.md && git add CHANGELOG.md",
     "release": "bumpp --all --execute \"pnpm changelog\" && npm publish",
     "dev": "tsup --watch src",
