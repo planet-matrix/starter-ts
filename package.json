@@ -42,40 +42,42 @@
   "files": [
     "dist"
   ],
+  "simple-git-hooks": {
+    "pre-commit": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test -- run && pnpm knip && pnpm build && pnpm publint"
+  },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch src",
+    "prepare": "simple-git-hooks",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint --max-warnings 0 .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "build": "tsup",
+    "publint": "publint",
+    "knip": "knip",
     "prepublishOnly": "pnpm build",
     "changelog": "changelogen --output && prettier --write CHANGELOG.md && git add CHANGELOG.md",
     "release": "bumpp --all --execute \"pnpm changelog\" && npm publish",
-    "start": "tsx src/index.ts",
-    "test": "vitest",
-    "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "dev": "tsup --watch src",
+    "start": "tsx src/index.ts"
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
-    "@types/node": "^20.10.2",
-    "@typescript-eslint/eslint-plugin": "^6.13.1",
-    "@typescript-eslint/parser": "^6.13.1",
+    "@types/node": "^20.10.3",
+    "@typescript-eslint/eslint-plugin": "^6.13.2",
+    "@typescript-eslint/parser": "^6.13.2",
     "bumpp": "^9.2.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.55.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-unicorn": "^49.0.0",
+    "knip": "^3.5.0",
     "prettier": "^3.1.0",
-    "rimraf": "^5.0.5",
+    "publint": "^0.2.6",
     "simple-git-hooks": "^2.9.0",
     "tsup": "^8.0.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.2",
-    "vite": "^5.0.4",
-    "vitest": "^1.0.0-beta.6"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test -- run && pnpm build"
+    "vitest": "^1.0.1"
   }
 }

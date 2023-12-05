@@ -21,6 +21,7 @@ const plugins = {
 }
 
 export default [
+  // don't lint js files
   {
     ignores: ["**/*.js", "**/*.cjs", "**/*.mjs"],
   },

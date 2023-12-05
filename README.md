@@ -5,10 +5,11 @@
 [![bundle][bundle-src]][bundle-href]
 [![JSDocs][jsdocs-src]][jsdocs-href]
 [![License][license-src]][license-href]
+[![code style: prettier][code-style-src]][code-style-href]
 
 _description_
 
-> **Note**:
+> [!NOTE]
 > Replace `pkg-placeholder`, `_description_` and `hyoban` globally to use this template.
 
 ## License
@@ -17,6 +18,8 @@ _description_
 
 <!-- Badges -->
 
+[code-style-src]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat
+[code-style-href]: https://github.com/prettier/prettier
 [npm-version-src]: https://img.shields.io/npm/v/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
 [npm-version-href]: https://npmjs.com/package/pkg-placeholder
 [npm-downloads-src]: https://img.shields.io/npm/dm/pkg-placeholder?style=flat&colorA=080f12&colorB=1fa669
